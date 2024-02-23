@@ -8,7 +8,7 @@
 ### create file ecs_cluster.tf  
 ```
 module "ecs_cluster_01" {
-    source = "git@github.com:aws-iac-tf-modules/cluster_ecs.git?ref=v1.0.0"
+    source = "git@github.com:felipelima5/metabase-project-ecs-cluster-module.git?ref=v1.0.0"
 
     ecs_cluster_name               = "empresa_01"
     logging                        = "OVERRIDE"
