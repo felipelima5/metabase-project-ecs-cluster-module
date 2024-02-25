@@ -12,11 +12,16 @@ resource "aws_ecs_cluster" "this" {
       }
     }
   }
-
+  
   setting {
     name  = "containerInsights"
     value = var.containerInsights
   }
   tags = var.tags
 
+}
+
+resource "aws_cloudwatch_log_group" "this" {
+  name = "/ecs/cluster/${var.ecs_cluster_name}"
+  tags = var.tags
 }
